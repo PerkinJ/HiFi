@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hi-Fi音悦吧-登录</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+	
+</head>
+<body>
+		<header id="top">
+			<div class="menu">
+				<ul>
+					<li><a href="./index.html" class="active">首页</a></li>
+					<li><a href="./category.html">类型</a></li>
+					<li><a href="./singer.html">歌手</a></li>
+				</ul>
+			</div>
+			<div id="image">
+				<img src="images/images/i2.png">
+			</div>
+			<div class="login">
+				<!-- <a href="">注册</a> -->
+				<a href="index.html">&lt;&lt;返回</a>
+			</div>
+		</header>
+		<section class="main">
+			<header role="banner" id="banner"></header>
+			<div id="logo"><img src="images/images/login-logo.jpg"></div>
+			<form action="" method="post" name="loginform" onsubmit="return Submit();">
+			<input type="text" placeholder="请输入账号" name="id"/>
+			<div id="login-id">用户名必须为6~16的有效字符！</div>
+			<input type="password" placeholder="请输入密码" name="password"/>
+			<div id="login-pwd">密码必须为6~18位的任意字符！</div>
+			<input type="submit" value="登&nbsp;&nbsp;录" />
+			<a href="#registermodal" class="flatbtn" id="modaltrigger">注&nbsp;&nbsp;册</a>
+			</form>
+			<script type="text/javascript">
+			function Submit(){
+				//验证账号
+				var id = document.loginform.id.value;
+				if(id.match(/^[a-zA-Z0-9_]{6,16}$/)==null){
+					document.getElementById("login-id").style.display = 'block';
+					return false;
+				}
+				//验证密码
+				var pass = document.loginform.password.value;
+				if(pass.match(/^.{6,18}$/) == null){
+					document.getElementById("login-pwd").style.display = 'block';			
+					return false;
+				}
+				return true;
+			}	
+			</script>
+			<div id="right_logo"><img src="images/images/login-logo.gif"></div>
+		</section>
+		<!--表单验证-->
+		<script type="text/javascript">
+		function doSubmit(){	
+			//验证账号
+			var id = document.myform.id.value;
+			if(id.match(/^[a-zA-Z0-9_]{6,16}$/)==null){
+				document.getElementById("id-tips").style.display = 'block';
+				return false;
+			}
+			//验证密码
+			var pass = document.myform.password.value;
+			if(pass.match(/^.{6,18}$/) == null){
+				document.getElementById("pwd-tips").style.display = 'block';			
+				return false;
+			}
+			//验证密码是否一致
+           	var repass = document.myform.repassword.value;
+           	if(repass !== pass){
+           		document.getElementById("repwd-tips").style.display = 'block';
+           		return false;
+           	}
+			
+			//验证邮箱
+			var email = document.myform.email.value;
+			if(email.match(
+				/^[a-zA-Z0-9_\.]+@[a-zA-Z0-9\-]+(\.[a-z]+){1,2}$/)==null){
+					document.getElementById("email-tips").style.display = 'block';
+					return false;
+				}	
+				return true;
+			}
+		</script>
+		<div id="registermodal" style="display:none;">
+			<header role="banner" id="banner"></header>
+			<div id="re-logo"><img src="images/images/register-logo.jpg"></div>
+			<form id="registerform" name="myform" method="post" action="" onsubmit="return doSubmit();">
+				<label for="username">用户名:</label>
+				<input type="text" placeholder="请输入账号" name="id"/>
+				<div id="id-tips">用户名必须为6~16的有效字符！</div>
+				<label for="password">密&nbsp;&nbsp;&nbsp;码:</label>
+				<input type="password" placeholder="请输入密码" name="password" id="pwd" />
+				<div id="pwd-tips">密码必须为6~18位的任意字符！</div>
+				<label for="repassword">重复密码:</label>
+				<input type="password" placeholder="请再次输入密码" name="repassword" id="repwd"/>
+				<div id="repwd-tips">两次密码不一致！！</div>
+				<label for="email">Email:</label>
+				<input type="email" placeholder="请输入邮箱" name="email"/>
+				<div id="email-tips">请输入正确电子邮箱！</div>
+				<input type="submit" value="注&nbsp;&nbsp;册"/>
+				<input type="reset" value="重&nbsp;&nbsp;置"/>
+			</form>
+		</div>
+		<script type="text/javascript">
+		$(function(){
+
+			$('#loginform').submit(function(e){
+				return false;
+			});
+			
+			//弹出层调用语句
+			$('#modaltrigger').leanModal({
+				top:90,
+				overlay:0.65,
+				closeButton:".hidemodal"
+			});
+			
+		});
+		</script>
+		<div class="footer">
+			<img src="images/images/footer.png">
+			<span>Hi-FI音悅吧</span>
+		<ul>
+			<li><a href="">联系我们</a>  |   <a href="">网站声明</a>  | </li>
+						<li>中南大学软件学院所有  | </li>
+						<li> 湘ICP备05005659</li>	
+		</ul>
+	</div>
+</body>
+</html>

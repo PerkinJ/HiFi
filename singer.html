@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hi-Fi音悦吧-歌手列表</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+	<script type="text/javascript" src="js/index.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/singer.css">
+</head>
+<body>
+	<header class="header">
+			<div class="menu">
+				<ul>
+					<li><a href="./index.html" class="active">首页</a></li>
+					<li><a href="./category.html">类型</a></li>
+					<li><a href="./singer.html">歌手</a></li>
+				</ul>
+			</div>
+			<div id="person">
+				<a href="mymusic.html">
+				<img src="images/images/face-cm.png">
+				<!--不登录则用户id不显示-->
+				<div id="name">Perkin</div>
+				</a>
+			</div>
+			<div class="login">
+				<!--登录之后，取消显示-->
+				<a href="./login.html">登录</a>
+			</div>
+			<div class="out">
+				<a href="./login.html">退出</a>
+			</div>
+	</header>
+	<script type="text/javascript">
+  	document.body.style.height = view().h+"px";
+	</script>
+	<style type="text/css">
+	#picList img{height:185px;}
+	</style>
+	<section class="banner">
+		<section id="tabPic">
+		      <ul id="picList">
+		        <li><img src="images/banner1.jpg"/></li>
+		        <li><img src="images/banner2.jpg"/></li>
+		        <li><img src="images/banner3.png"/></li>
+		        <li><img src="images/4.jpg"/></li>
+		        <li><img src="images/5.jpg"/></li>
+		      </ul>
+		      <section class="picMask">
+		        <p>音乐天地</p>
+		        <nav>
+		          <a href="javascript:;" class="active"></a>
+		          <a href="javascript:;"></a>
+		          <a href="javascript:;"></a>
+		          <a href="javascript:;"></a>
+		          <a href="javascript:;"></a>
+		        </nav>
+		      </section>
+		 </section> 
+	</section>
+	<script type="text/javascript">
+      fnTab();
+  	</script>
+	<section class="main">
+		<div class="navbar navbar-default" id="navmenu">
+		    <a href="##" class="navbar-brand">歌手列表</a>
+		    <ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="##" data-toggle="dropdown" class="dropdown-toggle" role="button" id="tutorial">全部<b class="caret"></b></a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="tutorial">
+						<li role="presentation"><a href="##">男艺人</a></li>
+						<li role="presentation"><a href="##">女艺人</a></li>
+						<li role="presentation"><a href="##">乐队组合</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<section class="singer">
+			<ul>
+				<a href=""><li><img src="images/6 (9).jpg"><div>one direction</div></li></a>
+				<a href=""><li><img src="images/6 (1).jpg"><div>周杰伦</div></li></a>
+				<a href=""><li><img src="images/6 (2).jpg"><div>蔡依林</div></li></a>
+				<a href=""><li><img src="images/6 (3).jpg"><div>林俊杰</div></li></a>
+				<a href=""><li><img src="images/6 (4).jpg"><div>王力宏</div></li></a>
+				<a href=""><li><img src="images/6 (5).jpg"><div>Taylor Swift</div></li></a>
+				<a href=""><li><img src="images/6 (6).jpg"><div>Justin Biber</div></li></a>
+				<a href=""><li><img src="images/6 (7).jpg"><div>李宇春</div></li></a>
+				<a href=""><li><img src="images/6 (8).jpg"><div>周笔畅</div></li></a>
+				<a href=""><li><img src="images/6 (10).jpg"><div>张杰</div></li></a>
+				<a href=""><li><img src="images/6 (11).jpg"><div>张信哲</div></li></a>
+				<a href=""><li><img src="images/6 (9).jpg"><div>one direction</div></li></a>
+				<a href=""><li><img src="images/6 (1).jpg"><div>周杰伦</div></li></a>
+				<a href=""><li><img src="images/6 (2).jpg"><div>蔡依林</div></li></a>
+				<a href=""><li><img src="images/6 (3).jpg"><div>林俊杰</div></li></a>
+				<a href=""><li><img src="images/6 (4).jpg"><div>王力宏</div></li></a>
+				<a href=""><li><img src="images/6 (5).jpg"><div>Taylor Swift</div></li></a>
+				<a href=""><li><img src="images/6 (6).jpg"><div>Justin Biber</div></li></a>
+				<a href=""><li><img src="images/6 (7).jpg"><div>李宇春</div></li></a>
+				<a href=""><li><img src="images/6 (8).jpg"><div>周笔畅</div></li></a>
+			</ul>
+		</section>
+	</section>
+	<footer>
+		<div class="footer">
+				<img src="images/images/footer.png">
+				<div id="logo"><img src="images/images/logo.jpg"></div>
+			<ul>
+				<li><a href="">联系我们</a>  |   <a href="">网站声明</a>  |   中南大学版权所有  |湘ICP备05005659</li>	
+			</ul>
+		</div>
+	</footer>
+	<div class="toolbar">
+   <span class="toolbar-layer"></span>
+   </a>
+  <!--   <span class="toolbar-layer"></span>
+   </a> -->
+   <a href="javascript:scroll(0,0)" id="top" class="toolbar-item toolbar-item-top"></a>
+	</div>
+  	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script> 
+</body>
+</html>

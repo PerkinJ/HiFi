@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hi-Fi音悦吧-歌曲分类</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+	<script type="text/javascript" src="js/index.js"></script>
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/category.css">
+</head>
+<body>
+	<header class="header">
+			<div class="menu">
+				<ul>
+					<li><a href="./index.html" class="active">首页</a></li>
+					<li><a href="./category.html">类型</a></li>
+					<li><a href="./singer.html">歌手</a></li>
+				</ul>
+			</div>
+			<div id="person">
+				<a href="mymusic.html">
+				<img src="images/images/face-cm.png">
+				<!--不登录则用户id不显示-->
+				<div id="name">Perkin</div>
+				</a>
+			</div>
+			<div class="login">
+				<!--登录之后，取消显示-->
+				<a href="./login.html">登录</a>
+			</div>
+			<div class="out">
+				<a href="./login.html">退出</a>
+			</div>
+	</header>
+	<script type="text/javascript">
+  	document.body.style.height = view().h+"px";
+	</script>
+	<style type="text/css">
+	#picList img{height:185px;}
+	</style>
+	<section class="banner">
+		<section id="tabPic">
+		      <ul id="picList">
+		        <li><img src="images/banner1.jpg"/></li>
+		        <li><img src="images/banner2.jpg"/></li>
+		        <li><img src="images/banner3.png"/></li>
+		        <li><img src="images/4.jpg"/></li>
+		        <li><img src="images/5.jpg"/></li>
+		      </ul>
+		      <section class="picMask">
+		        <p>音乐天地</p>
+		        <nav>
+		          <a href="javascript:;" class="active"></a>
+		          <a href="javascript:;"></a>
+		          <a href="javascript:;"></a>
+		          <a href="javascript:;"></a>
+		          <a href="javascript:;"></a>
+		        </nav>
+		      </section>
+		 </section> 
+	</section>
+	<script type="text/javascript">
+      fnTab();
+  	</script>
+
+	<section class="main">
+		<section class="metro">	
+				<ul class="list">
+					<li><a href="#pop"  onclick="javascript:document.getElementById('pop').scrollIntoView()"><p>流行</p></a></li>
+					<li><a href="#rock" onclick="javascript:document.getElementById('rock').scrollIntoView()"><p>摇滚</p></a></li>
+					<li><a href="#ele"  onclick="javascript:document.getElementById('ele').scrollIntoView()"><p>电音</p></a></li>
+					<li><a href="#folk" onclick="javascript:document.getElementById('folk').scrollIntoView()"><p>民谣</p></a></li>
+					<li><a href="#classical" onclick="javascript:document.getElementById('classical').scrollIntoView()"><p>古典</p></a></li>
+					<li><a href="#dance" onclick="javascript:document.getElementById('dance').scrollIntoView()"><p>舞曲</p></a></li>
+					<li><a href="#blue" onclick="javascript:document.getElementById('folk').scrollIntoView()"><p>蓝调</p></a></li>
+					<li><a href="#jazz" onclick="javascript:document.getElementById('jazz').scrollIntoView()"><p>爵士</p></a></li>
+					<li><a href="#metal" onclick="javascript:document.getElementById('metal').scrollIntoView()"><p>金属</p></a></li>
+				</ul>			
+		</section>
+		<!--音乐模块-->
+		<section class="type" id="pop">
+			<h2>流行</h2>
+			<ul class="voice">
+				<a href="#"><li>演员</li></a>
+				<a href="#"><li>一次就好</li></a>
+				<a href="#"><li>丑八怪</li></a>
+				<a href="#"><li>亲爱的小孩</li></a>
+				<a href="#"><li>单车</li></a>
+				<a href="#"><li>不语</li></a>
+				<a href="#"><li>心跳</li></a>
+				<a href="#"><li>演员</li></a>
+				<a href="#"><li>真的受伤了</li></a>
+				<a href="#"><li>真心话太冒险</li></a>
+				<a href="#"><li>简单爱</li></a>
+				<a href="#"><li>龙卷风</li></a>
+				<a href="#"><li>借口</li></a>
+				<a href="#"><li>一路向北</li></a>
+				<a href="#"><li>东风破</li></a>
+				<a href="#"><li>千里之外</li></a>
+				<a href="#"><li>菊花台</li></a>
+				<a href="#"><li>安静</li></a>
+				<a href="#"><li>龙卷风</li></a>
+				<a href="#"><li>借口</li></a>
+				<a href="#"><li>一路向北</li></a>
+				<a href="#"><li>东风破</li></a>
+				<a href="#"><li>千里之外</li></a>
+				<a href="#"><li>菊花台</li></a>
+				<a href="#"><li>安静</li></a>
+				<a href="#"><li>更多...</li></a>
+			</ul>
+		</section>
+		<section class="type" id="rock">
+			<h2>摇滚</h2>
+			<ul class="voice">
+				<a href="#"><li>演员</li></a>
+				<a href="#"><li>一次就好</li></a>
+				<a href="#"><li>丑八怪</li></a>
+				<a href="#"><li>亲爱的小孩</li></a>
+				<a href="#"><li>单车</li></a>
+				<a href="#"><li>不语</li></a>
+				<a href="#"><li>心跳</li></a>
+				<a href="#"><li>演员</li></a>
+				<a href="#"><li>演员</li></a>
+				<a href="#"><li>一路向北</li></a>
+				<a href="#"><li>东风破</li></a>
+				<a href="#"><li>千里之外</li></a>
+				<a href="#"><li>菊花台</li></a>
+				<a href="#"><li>安静</li></a>
+				<a href="#"><li>龙卷风</li></a>
+				<a href="#"><li>借口</li></a>
+				<a href="#"><li>一路向北</li></a>
+				<a href="#"><li>东风破</li></a>
+				<a href="#"><li>千里之外</li></a>
+				<a href="#"><li>菊花台</li></a>
+				<a href="#"><li>安静</li></a>
+				<a href="#"><li>更多...</li></a>
+			</ul>
+		</section>
+		<section class="type" id="ele">
+			<h2>电音</h2>
+			<ul class="voice">
+				<a href="#"><li>演员</li></a>
+				<a href="#"><li>一次就好</li></a>
+				<a href="#"><li>丑八怪</li></a>
+				<a href="#"><li>亲爱的小孩</li></a>
+				<a href="#"><li>单车</li></a>
+				<a href="#"><li>不语</li></a>
+				<a href="#"><li>心跳</li></a>
+				<a href="#"><li>一路向北</li></a>
+				<a href="#"><li>东风破</li></a>
+				<a href="#"><li>千里之外</li></a>
+				<a href="#"><li>菊花台</li></a>
+				<a href="#"><li>安静</li></a>
+				<a href="#"><li>龙卷风</li></a>
+				<a href="#"><li>借口</li></a>
+				<a href="#"><li>一路向北</li></a>
+				<a href="#"><li>东风破</li></a>
+				<a href="#"><li>千里之外</li></a>
+				<a href="#"><li>菊花台</li></a>
+				<a href="#"><li>安静</li></a>
+				<a href="#"><li>更多...</li></a>
+			</ul>
+		</section>
+		<section class="type" id="folk">
+			<h2>民谣</h2>
+			<ul class="voice">
+				<a href="#"><li>演员</li></a>
+				<a href="#"><li>一次就好</li></a>
+				<a href="#"><li>丑八怪</li></a>
+				<a href="#"><li>亲爱的小孩</li></a>
+				<a href="#"><li>单车</li></a>
+				<a href="#"><li>不语</li></a>
+				<a href="#"><li>心跳</li></a>
+				<a href="#"><li>一路向北</li></a>
+				<a href="#"><li>东风破</li></a>
+				<a href="#"><li>千里之外</li></a>
+				<a href="#"><li>菊花台</li></a>
+				<a href="#"><li>安静</li></a>
+				<a href="#"><li>龙卷风</li></a>
+				<a href="#"><li>借口</li></a>
+				<a href="#"><li>一路向北</li></a>
+				<a href="#"><li>东风破</li></a>
+				<a href="#"><li>千里之外</li></a>
+				<a href="#"><li>菊花台</li></a>
+				<a href="#"><li>安静</li></a>
+				<a href="#"><li>更多...</li></a>
+			</ul>
+		</section>
+		<section class="type" id="classical">
+			<h2>古典</h2>
+			<ul class="voice">
+				<a href="#"><li>演员</li></a>
+				<a href="#"><li>一次就好</li></a>
+				<a href="#"><li>丑八怪</li></a>
+				<a href="#"><li>亲爱的小孩</li></a>
+				<a href="#"><li>单车</li></a>
+				<a href="#"><li>不语</li></a>
+				<a href="#"><li>心跳</li></a>
+				<a href="#"><li>一路向北</li></a>
+				<a href="#"><li>东风破</li></a>
+				<a href="#"><li>千里之外</li></a>
+				<a href="#"><li>菊花台</li></a>
+				<a href="#"><li>安静</li></a>
+				<a href="#"><li>龙卷风</li></a>
+				<a href="#"><li>借口</li></a>
+				<a href="#"><li>一路向北</li></a>
+				<a href="#"><li>东风破</li></a>
+				<a href="#"><li>千里之外</li></a>
+				<a href="#"><li>菊花台</li></a>
+				<a href="#"><li>安静</li></a>
+				<a href="#"><li>更多...</li></a>
+			</ul>
+		</section>
+		<section class="type" id="dance">
+			<h2>舞曲</h2>
+			<ul class="voice">
+				<a href="#"><li>演员</li></a>
+				<a href="#"><li>一次就好</li></a>
+				<a href="#"><li>丑八怪</li></a>
+				<a href="#"><li>亲爱的小孩</li></a>
+				<a href="#"><li>单车</li></a>
+				<a href="#"><li>不语</li></a>
+				<a href="#"><li>心跳</li></a>
+				<a href="#"><li>一路向北</li></a>
+				<a href="#"><li>东风破</li></a>
+				<a href="#"><li>千里之外</li></a>
+				<a href="#"><li>菊花台</li></a>
+				<a href="#"><li>安静</li></a>
+				<a href="#"><li>龙卷风</li></a>
+				<a href="#"><li>借口</li></a>
+				<a href="#"><li>一路向北</li></a>
+				<a href="#"><li>东风破</li></a>
+				<a href="#"><li>千里之外</li></a>
+				<a href="#"><li>菊花台</li></a>
+				<a href="#"><li>安静</li></a>
+				<a href="#"><li>更多...</li></a>
+			</ul>
+		</section>
+		<section class="type" id="blue">
+			<h2>蓝调</h2>
+			<ul class="voice">
+				<a href="#"><li>演员</li></a>
+				<a href="#"><li>一次就好</li></a>
+				<a href="#"><li>丑八怪</li></a>
+				<a href="#"><li>亲爱的小孩</li></a>
+				<a href="#"><li>单车</li></a>
+				<a href="#"><li>不语</li></a>
+				<a href="#"><li>心跳</li></a>
+				<a href="#"><li>一路向北</li></a>
+				<a href="#"><li>东风破</li></a>
+				<a href="#"><li>千里之外</li></a>
+				<a href="#"><li>菊花台</li></a>
+				<a href="#"><li>安静</li></a>
+				<a href="#"><li>龙卷风</li></a>
+				<a href="#"><li>借口</li></a>
+				<a href="#"><li>一路向北</li></a>
+				<a href="#"><li>东风破</li></a>
+				<a href="#"><li>千里之外</li></a>
+				<a href="#"><li>菊花台</li></a>
+				<a href="#"><li>安静</li></a>
+				<a href="#"><li>更多...</li></a>
+			</ul>
+		</section>
+		<section class="type"  id="jazz">
+			<h2>爵士</h2>
+			<ul class="voice">
+				<a href="#"><li>演员</li></a>
+				<a href="#"><li>一次就好</li></a>
+				<a href="#"><li>丑八怪</li></a>
+				<a href="#"><li>亲爱的小孩</li></a>
+				<a href="#"><li>单车</li></a>
+				<a href="#"><li>不语</li></a>
+				<a href="#"><li>心跳</li></a>
+				<a href="#"><li>一路向北</li></a>
+				<a href="#"><li>东风破</li></a>
+				<a href="#"><li>千里之外</li></a>
+				<a href="#"><li>菊花台</li></a>
+				<a href="#"><li>安静</li></a>
+				<a href="#"><li>龙卷风</li></a>
+				<a href="#"><li>借口</li></a>
+				<a href="#"><li>一路向北</li></a>
+				<a href="#"><li>东风破</li></a>
+				<a href="#"><li>千里之外</li></a>
+				<a href="#"><li>菊花台</li></a>
+				<a href="#"><li>安静</li></a>
+				<a href="#"><li>更多...</li></a>
+			</ul>
+		</section>
+		<section class="type"   id="metal">
+			<h2>金属</h2>
+			<ul class="voice">
+				<a href="#"><li>演员</li></a>
+				<a href="#"><li>一次就好</li></a>
+				<a href="#"><li>丑八怪</li></a>
+				<a href="#"><li>亲爱的小孩</li></a>
+				<a href="#"><li>单车</li></a>
+				<a href="#"><li>不语</li></a>
+				<a href="#"><li>心跳</li></a>
+				<a href="#"><li>一路向北</li></a>
+				<a href="#"><li>东风破</li></a>
+				<a href="#"><li>千里之外</li></a>
+				<a href="#"><li>菊花台</li></a>
+				<a href="#"><li>安静</li></a>
+				<a href="#"><li>龙卷风</li></a>
+				<a href="#"><li>借口</li></a>
+				<a href="#"><li>一路向北</li></a>
+				<a href="#"><li>东风破</li></a>
+				<a href="#"><li>千里之外</li></a>
+				<a href="#"><li>菊花台</li></a>
+				<a href="#"><li>安静</li></a>
+				<a href="#"><li>更多...</li></a>
+			</ul>
+		</section>
+	</section>
+	<footer>
+		<div class="footer">
+				<img src="images/images/footer.png">
+				<div id="logo"><img src="images/images/logo.jpg"></div>
+			<ul>
+				<li><a href="">联系我们</a>  |   <a href="">网站声明</a>  |   中南大学版权所有  |湘ICP备05005659</li>	
+			</ul>
+		</div>
+	</footer>
+ 	<div class="toolbar">
+   <span class="toolbar-layer"></span>
+   </a>
+  <!--   <span class="toolbar-layer"></span>
+   </a> -->
+   <a href="javascript:scroll(0,0)" id="top" class="toolbar-item toolbar-item-top"></a>
+</div>
+</body>
+</html>

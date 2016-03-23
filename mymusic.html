@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hi-Fi音悦吧-我的音乐</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="css/mymusic.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+	<script type="text/javascript" src="js/index.js"></script>
+	<link rel="stylesheet" href="css/animate.min.css"/>
+</head>
+<body>
+	<header>
+		<div class="icon">
+			<img src="images/images/i2.png">
+			<span>我的音乐</span>
+		</div>	
+		<div class="back">
+			
+			<span><a href="index.html">&lt;&lt;返回</a></span>
+		</div>
+	</header>
+	<script type="text/javascript">
+  	document.body.style.height = view().h+"px";
+	</script>
+	<section class="banner">
+		<section id="tabPic">
+		      <ul id="picList">
+		        <li><img src="images/banner1.jpg"/></li>
+		        <li><img src="images/banner2.jpg"/></li>
+		        <li><img src="images/banner3.png"/></li>
+		        <li><img src="images/4.jpg"/></li>
+		        <li><img src="images/5.jpg"/></li>
+		      </ul>
+		      <section class="picMask">
+		        <p>音乐天地</p>
+		        <nav>
+		          <a href="javascript:;" class="active"></a>
+		          <a href="javascript:;"></a>
+		          <a href="javascript:;"></a>
+		          <a href="javascript:;"></a>
+		          <a href="javascript:;"></a>
+		        </nav>
+		      </section>
+		 </section> 
+	</section>
+	<script type="text/javascript">
+      fnTab();
+  	</script>
+  	<section class="main">
+  		<aside>
+			<section role="complementary">
+				<div class="sideBlock unSung">
+					<h1>*热门推荐</h1>
+					<a href="#">
+						<img src="images/6 (7).jpg" alt="Midnight Run" />
+					</a>
+					<a href="#"><img class="sideImage" src="images/6 (9).jpg" alt="Wyatt Earp" /><span class="moreInfo">更多...</span>
+					</a>
+				</div>
+			</section>
+			<section role="complementary">
+			<div class="sideBlock overHyped">
+				<h1>*新歌推荐</h1>
+				<a href="#"><img src="images/6 (8).jpg" alt="Moulin Rouge" /></a>
+				<a href="#"><img class="sideImage" src="images/6 (10).jpg" alt="King Kong" /><span class="moreInfo">更多...</span></a>
+			</div>
+		</section>
+		</aside>
+		<section class="music">
+			<section id="search">
+					<input type="text"  placeholder="仅限搜索已拥有的歌曲" id="music-name"></input>
+					<button type="button" id="btn1">搜索</button>
+			</section>
+			<script type="text/javascript">
+				window.onload = function(){
+					var oTab=document.getElementById('tab1');
+					var oTxt=document.getElementById('music-name');
+					var oBtn=document.getElementById('btn1');
+
+					oBtn.onclick=function ()
+						{
+							for(var i=0;i<oTab.tBodies[1].rows.length;i++)
+							{
+								var sTab=oTab.tBodies[1].rows[i].cells[1].innerHTML.toLowerCase();
+								var sTxt=oTxt.value.toLowerCase();
+								
+								var arr=sTxt.split(' ');
+								
+								oTab.tBodies[1].rows[i].style.display='none';
+								
+								for(var j=0;j<arr.length;j++)
+								{
+									if(sTab.search(arr[j])!=-1)
+									{
+										oTab.tBodies[1].rows[i].style.display='table-row';
+
+									}
+								}
+
+							}
+						};
+
+					};
+			</script>
+			<section id="person">
+				<img src="images/images/face-cm.png">
+				<div id="name">Perkin</div>
+				<div id="load">已购买10首歌</div>
+				<div id="extend"><a href="javascript:;" style="color:#333;font-size: 14px;line-height: 20px;" class="bounceInLeft dialog">个人信息>></a></div>
+			</section>
+			<!--个人信息完善模块-->
+					<div id="HBox">
+						<form action="" method="post" onsubmit="return false;">
+							<ul class="list1">
+								<li>
+									<strong>性 别 <font color="#ff0000">&nbsp;</font></strong>
+									<div class="fl">
+										<label class="mr10"><input type="radio" name="sex" value="1"/>男</label>
+										<label class="mr10"><input type="radio" name="sex" value="2"/>女</label>
+									</div>
+								</li>
+								<li>
+									<strong>头 像<font color="#ff0000">&nbsp;</font></strong>
+									<div class="fl">
+										<label><input type="file" name="pic" value="头像上传"/></label>
+									</div>
+								</li>
+								<li><input type="submit" value="确认提交" class="submitBtn" /></li>
+							</ul>
+						</form>
+					</div><!-- HBox end -->	
+				</div><!-- box end -->
+			</div><!-- wrapper end -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery.hDialog.min.js"></script>
+			<script>
+			$(function(){
+				var $el = $('.dialog');
+				$el.hDialog();
+			
+				//提交并验证表单
+				$('.submitBtn').click(function() {
+					// var EmailReg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/; //邮件正则
+					// var PhoneReg = /^0{0,1}(13[0-9]|15[0-9]|153|156|18[7-9])[0-9]{8}$/ ; //手机正则
+					// var $nickname = $('.nickname');
+					// var $email = $('.email'); 
+					// var $phone = $('.phone');
+					// if($nickname.val() == ''){
+					// 	$.tooltip('昵称还没填呢...'); $nickname.focus();
+					// }else if($phone.val() == ''){
+					// 	$.tooltip('手机还没填呢...'); $phone.focus();
+					// }else if(!PhoneReg.test($phone.val())){
+					// 	$.tooltip('手机格式错咯...'); $phone.focus();
+					// }else if($email.val() == ''){
+					// 	$.tooltip('邮箱还没填呢...'); $email.focus();
+					// }else if(!EmailReg.test($email.val())){
+					// 	$.tooltip('邮箱格式错咯...'); $email.focus();
+					// }else{
+						$.tooltip('提交成功，2秒后自动关闭',2000,true);
+						setTimeout(function(){ 
+							//$el.hDialog('close',{box:'#HBox'},'http://smwell.sinaapp.com/');  //也可以加跳转链接哦~
+							$el.hDialog('close',{box:'#HBox'}); 
+						},2000);
+					// }
+				});
+			});
+			</script>
+			<section id="list">
+				<span id="music-list">歌曲列表</span><i>10首歌</i>
+				<table class="list" id="tab1">
+					<tr id="table-th">
+						<td>&nbsp;</td>
+						<td>歌曲标题</td>
+						<td>时长</td>
+						<td>歌手</td>
+						<td>类别</td>
+					</tr>
+					<tbody>
+					<tr>
+						<td>1</td>
+						<td><a href="">梦里的声音</a></td>
+						<td>03:54</td>
+						<td>张婧</td>
+						<td>一直走</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><a href="">我们都不完美</a></td>
+						<td>03:54</td>
+						<td>张婧</td>
+						<td>一直走</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td><a href="">放飞美丽</a></td>
+						<td>03:54</td>
+						<td>张婧</td>
+						<td>一直走</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td><a href="">梦想的翅膀</a></td>
+						<td>03:54</td>
+						<td>张婧</td>
+						<td>一直走</td>
+					</tr>
+
+					<tr>
+						<td>5</td>
+						<td><a href="">要怎么办</a></td>
+						<td>03:54</td>
+						<td>张婧</td>
+						<td>一直走</td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td><a href="">海沫</a></td>
+						<td>03:54</td>
+						<td>张婧</td>
+						<td>一直走</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td><a href="">心事</a></td>
+						<td>03:54</td>
+						<td>张婧</td>
+						<td>一直走</td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td><a href="">一样的月光</a></td>
+						<td>03:54</td>
+						<td>张婧</td>
+						<td>一直走</td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td><a href="">不,完美</a></td>
+						<td>03:54</td>
+						<td>张婧</td>
+						<td>一直走</td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td><a href="">梦里的声音</a></td>
+						<td>03:54</td>
+						<td>张婧</td>
+						<td>一直走</td>
+					</tr>
+			
+					</tbody>
+				</table>
+			</section>
+			<section id="content">
+				<a class="button" href="#">Hi-FI&nbsp;期待您的加入！<span>&raquo;</span></a>
+			</section>
+		</section>
+
+  	</section>
+	<div class="footer">
+			<img src="images/images/footer.png">
+			<span>Hi-FI音悅吧</span>
+		<ul>
+			<li><a href="">联系我们</a>  |   <a href="">网站声明</a>  |   中南大学版权所有  |湘ICP备05005659</li>	
+		</ul>
+	</div>
+</body>
+</html>

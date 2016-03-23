@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hi-Fi音悦吧-播放列表</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+	<script type="text/javascript" src="js/index.js"></script>
+	<!-- <link rel="stylesheet" href="css/index.css" /> -->
+	<link rel="stylesheet" type="text/css" href="css/player.css">
+	<link rel="stylesheet" href="css/music.css" />
+</head>
+<body>
+	<header class="header">
+			<div class="menu">
+				<ul>
+					<li><a href="./index.html" class="active">首页</a></li>
+					<li><a href="./category.html">类型</a></li>
+					<li><a href="./singer.html">歌手</a></li>
+				</ul>
+			</div>
+			<div id="person">
+				<a href="mymusic.html">
+				<img src="images/images/face-cm.png">
+				<!--不登录则用户id不显示-->
+				<div id="name">Perkin</div>
+				</a>
+			</div>
+			<div class="login">
+				<!--登录之后，取消显示-->
+				<a href="./login.html">登录</a>
+			</div>
+			<div class="out">
+				<a href="./login.html">退出</a>
+			</div>
+	</header>
+	<div class="main">
+	<script type="text/javascript">
+					window.onload = function(){
+						// 格式化秒数到时间格式
+						Number.prototype.formatTime=function(){
+						    // 计算
+						    var h=0,i=0,s=parseInt(this);
+						    if(s>60){
+						        i=parseInt(s/60);
+						        s=parseInt(s%60);
+						        if(i > 60) {
+						            h=parseInt(i/60);
+						            i = parseInt(i%60);
+						        }
+						    }
+						    // 补零
+						    var zero=function(v){
+						        return (v>>0)<10?"0"+v:v;
+						    };
+						    return [zero(h),zero(i),zero(s)].join(":");
+						};
+
+						var audio = document.getElementById('audio');
+						var time = audio.duration;
+						document.getElementById('time').innerHTML = Number(time).formatTime();
+
+						var f = audio.duration/6*1000;
+					
+						var one = audio.duration/6*1000;
+						var two = audio.duration/6*2*1000;
+						var three = audio.duration/6*3*1000;
+						var four = audio.duration/6*4*1000;
+						var five = audio.duration/6*5*1000;
+						var six = audio.duration*1000;
+						setTimeout(function(){
+							document.getElementById('lyric').scrollTop = document.getElementById('lyric').scrollHeight/6;
+						},one);
+						setTimeout(function(){
+							document.getElementById('lyric').scrollTop = document.getElementById('lyric').scrollHeight/6*2;
+						},two);
+						setTimeout(function(){
+							document.getElementById('lyric').scrollTop = document.getElementById('lyric').scrollHeight/6*3;
+						},three);
+						setTimeout(function(){
+							document.getElementById('lyric').scrollTop = document.getElementById('lyric').scrollHeight/6*4;
+						},four);
+						setTimeout(function(){
+							document.getElementById('lyric').scrollTop = document.getElementById('lyric').scrollHeight/6*5;
+						},five);
+						setTimeout(function(){
+							document.getElementById('lyric').scrollTop = document.getElementById('lyric').scrollHeight;
+						},six);
+						fnScore();
+					};
+				</script>
+		<section >
+			<header class="title">
+				<span id="music">What do you mean?</span><div id="time"></div>
+				<em><i>521</i>&nbsp次购买</em>
+			</header>
+			<section class="background">
+				<aside class="album">
+					<div id="score-s">
+						<h2>评分：<span>4.2</span></h2>
+					</div>
+					<script type="text/javascript">
+						function showHide(){
+							var lyric = document.getElementById('lyric');
+							if(lyric.style.display == 'block'){
+								lyric.style.display = 'none';
+							}else{
+								lyric.style.display = 'block';
+							}
+						}
+					</script>
+					<div id="lyric-btn">
+						<a href="javascript:;" onclick="showHide()" class="newsBtn">歌词</a>
+					</div>
+					<div id="tags-s">
+						<h2>标签:</h2>
+						<ul>
+							<li>唱功好</li>
+							<li>音质好</li>
+							<li>特别</li>
+							<li>一般般</li>
+							<li>不好听</li>
+						<!-- 	<li></li>
+							<li></li>
+							<li></li> -->
+						</ul>
+					</div>
+					<img src="images/6 (5).jpg">
+				</aside>
+				<div id="lyric">
+What do you mean? 
+你到底想怎样？
+When you nod your head yes 
+当你不停点头同意时
+But you wanna say no 
+而内心是拒绝的
+What do you mean? 
+你到底想怎样？
+When you don't want me to move 
+你明明想要留住我的心
+But you tell me to go 
+却要我离开
+What do you mean? 
+你到底想怎样？
+What do you mean? 
+你到底想怎样？
+Said we're running out of time 
+说什么我们已走到了尽头
+What do you mean? 
+你到底想怎样？
+What do you mean? 
+你到底想怎样？
+Better make up your mind 
+你最好仔细思考 作出决定
+What do you mean? 
+你到底想怎样？
+You're so indecisive of what I'm saying 
+你对我所说的迟迟拿不定主意
+Trying to catch the beat make up your heart 
+我试着挖掘你内心的想法
+Don't know if you're happy or complaining 
+不知是快乐还是郁闷
+Don't want for us to end where do I start 
+但却又不想让我们在刚刚开始的地方结束
+First you wanna go left and you want to turn right 
+我向西边去你却向东边走
+Wanna argue all day make love all night 
+白天拌嘴斗舌晚上卿卿我我
+First you up and you're down and then between 
+你踌躇不决 不知所从
+Ohh I really want to know... 
+我真的想知道
+What do you mean? 
+你到底想怎样？
+When you nod your head yes 
+当你不停点头同意时
+But you wanna say no 
+而内心是拒绝的
+What do you mean? 
+你到底想怎样？
+When you don't want me to move 
+你明明想要留住我的心
+But you tell me to go 
+却要我离开
+What do you mean? 
+你到底想怎样？
+What do you mean? 
+你到底想怎样？
+Said we're running out of time 
+说什么我们已走到了尽头
+What do you mean? 
+你到底想怎样？
+What do you mean? 
+你到底想怎样？
+Better make up your mind 
+你最好仔细思考 作出决定
+What do you mean? 
+你到底想怎样？
+You're overprotective when I'm leaving 
+当我要离你而去了 你却说你对我情深似海
+Trying to compromise but I can't win 
+你向我妥协 我竟心软了
+You wanna make a point but you keep preaching 
+你约法三章 口若悬河的解释
+You had me from the start won't let this end 
+会牢牢扣住我的心绝不松手
+First you wanna go left and you want to turn right 
+我向西边去你却向东边走
+Wanna argue all day make love all night 
+白天拌嘴斗舌晚上卿卿我我
+First you up and you're down and then between 
+你踌躇不决 不知所从
+Ohh I really want to know... 
+我真的想知道
+What do you mean? 
+你到底想怎样？
+When you nod your head yes 
+当你不停点头同意时
+But you wanna say no 
+而内心是拒绝的
+What do you mean? 
+你到底想怎样？
+When you don't want me to move 
+你明明想要留住我的心
+But you tell me to go 
+却要我离开
+What do you mean? 
+你到底想怎样？
+I want to know... 
+我想明白
+What do you mean? 
+你到底想怎样？
+Said we're running out of time 
+说什么我们已走到了尽头
+What do you mean? 
+你到底想怎样？
+What do you mean? 
+你到底想怎样？
+Better make up your mind 
+你最好仔细思考 作出决定
+What do you mean? 
+你到底想怎样？
+When you nod your head yes 
+当你不停点头同意时
+But you wanna say no 
+而内心是拒绝的
+What do you mean? 
+你到底想怎样？
+When you don't want me to move 
+你明明想要留住我的心
+But you tell me to go 
+却要我离开
+What do you mean? 
+你到底想怎样？
+What do you mean? 
+你到底想怎样？
+Said we're running out of time 
+说什么我们已走到了尽头
+What do you mean? 
+你到底想怎样？
+What do you mean? 
+你到底想怎样？
+Better make up your mind 
+你最好仔细思考 作出决定
+				</div>
+			</section>	
+			<!--若已购买，则不显示-->	
+			<a href="javascript:;" class="buyBtn" id="buy" onclick="buyMusic();">购买此首歌曲</a>
+			<script type="text/javascript">
+				function buyMusic(){
+					var buyBtn = document.getElementById('buy');
+					if(confirm('是否要购买这首歌曲？')){
+						buyBtn.style.display = 'none';
+						document.getElementById('player').style.display = 'block';
+						return true;
+					}
+					return false;
+				} 
+			</script>
+			<section class="score-form" id="index">
+				<section id="score">
+				            <h2>给歌曲评分</h2>
+				            <ul class="scoreList">
+				                <li>
+				                    <span>综合印象</span>
+				                    <nav>
+				                        <a href="javascript:;"></a>
+				                        <a href="javascript:;"></a>
+				                        <a href="javascript:;"></a>
+				                        <a href="javascript:;"></a>
+				                        <a href="javascript:;"></a>
+				                    </nav>
+				                    <input type="hidden" value="0" />
+				                </li>
+				                <li>
+				                    <span>服务指数</span>
+				                    <nav>
+				                        <a href="javascript:;"></a>
+				                        <a href="javascript:;"></a>
+				                        <a href="javascript:;"></a>
+				                        <a href="javascript:;"></a>
+				                        <a href="javascript:;"></a>
+				                    </nav>
+				                    <input type="hidden" value="0" />
+				                </li>
+				                <li>
+				                    <span>消费指数</span>
+				                    <nav>
+				                        <a href="javascript:;"></a>
+				                        <a href="javascript:;"></a>
+				                        <a href="javascript:;"></a>
+				                        <a href="javascript:;"></a>
+				                        <a href="javascript:;"></a>
+				                    </nav>
+				                    <input type="hidden" value="0" />
+				                </li>
+				            </ul>
+				        </section>
+						<form action="" method="post" />
+				        <section class="tags" id="indexTag">
+				            <h2>给歌曲添加标签</h2>
+				            <label>
+				                <input type="radio" name="tags" value="唱功好" />
+				                <span>唱功好</span>
+				            </label>
+				            <label>
+				                <input type="radio" name="tags" value="音质好" />
+				                <span>音质好</span>
+				            </label>
+				            <label>
+				                <input type="radio" name="tags" value="前奏美" />
+				                <span>前奏美</span>
+				            </label>
+				            <label>
+				                <input type="radio" name="tags" value="歌甜" />
+				                <span>歌甜</span>
+				            </label>
+				            <label>
+				                <input type="radio" name="tags" value="特别" />
+				                <span>特别</span>
+				            </label>
+				            <label>
+				                <input type="radio" name="tags" value="怀旧" />
+				                <span>怀旧</span>
+				            </label>
+				            <label>
+				                <input type="radio" name="tags" value="一般般" />
+				                <span>一般般</span>
+				            </label>
+				            <label>
+				                <input type="radio" name="tags" value="还不错" />
+				                <span>还不错</span>
+				            </label>
+				            <label>
+				                <input type="radio" name="tags" value="难听" />
+				                <span>难听</span>
+				            </label>
+				            <label>
+				                <input type="radio" name="tags" value="挤爆了" />
+				                <span>弱爆了</span>
+				            </label>
+				        </section>
+				        <p class="info"></p>
+				        <input type="hidden" value="0" name="score" id="average"/>
+				        <input type="button" value="评分" class="btn submit"/>
+				        </form>
+				    </section>
+		</section>
+		<section class="page" id="mask">
+			<div>Hi-FI音悦工作室</div>
+		</section>
+		<div id="player">
+				<audio id="audio" preload="auto" src="audio.mp3" controls>
+					<!-- <source src="audio.mp3" />
+					<source src="audio.ogg" />
+					<source src="audio.wav" /> -->
+				</audio>
+		</div>
+		<script type="text/javascript">
+		</script>
+		<script src="js/main.js"></script>
+		<script src="js/audioplayer.js"></script>
+		<script>
+			$(function(){
+				var player = document.getElementById('player');
+				// var presrc = document.getElementById('audio').src;
+				var btn = document.getElementById('buy');
+				$( 'audio' ).audioPlayer();
+				document.getElementById('audio').addEventListener("ended",function(){
+			        if(btn.style.display !== 'none'){
+				        if(player.style.display !== 'none'){
+					        player.style.display = 'none';
+					        // alert('试听结束，请先购买');
+					        if(confirm('是否要购买这首歌曲？')){
+								btn.style.display = 'none';
+								document.getElementById('player').style.display = 'block';
+							}
+				    	}
+				    	}
+			        });
+		    	
+			});
+		</script>
+		</div>
+		<footer>
+		<div class="footer">
+				<img src="images/images/footer.png">
+				<div id="logo"><img src="images/images/logo.jpg"></div>
+			<ul>
+				<li><a href="">联系我们</a>  |   <a href="">网站声明</a>  |   中南大学版权所有  |湘ICP备05005659</li>
+			</ul>
+		</div>
+		</footer>
+</body>
+</html>
